@@ -1,0 +1,5 @@
+https://www.alura.com.br
+https://httpstat.us/200
+https://httpstat.us/400
+https://www.google.com.br
+https://casadocodigo.com.br
