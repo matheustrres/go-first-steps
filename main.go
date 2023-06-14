@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"os/user"
 
 	"hello/handlers"
 )
@@ -32,10 +33,16 @@ func main() {
 }
 
 func introduceApplication() {
-	name := "Matheus"
+	user, err := user.Current()
+
+	if err != nil {
+		panic(err)
+	}
+
+	username := user.Username
 
 	fmt.Println("----------------------------------------------------------------------")
-	fmt.Printf("Hello, %s! Please, choose a command instruction to be executed:", name)
+	fmt.Printf("Hello, %s! Please, choose a command instruction to be executed:", username)
 	fmt.Println()
 }
 
